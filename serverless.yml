@@ -4,9 +4,9 @@ frameworkVersion: '3'
 
 custom:
   classificationResultsTableName: 'java-classifications-${self:provider.stage}'
-  authorizerARN: 'arn:aws:cognito-idp:us-east-1:771784633686:userpool/us-east-1_lElc6uLFE'
+  authorizerARN: 'yourCognitoAuthorizerARN'
   logGroupName: 'PROD-Logs'
-  openaiKey: '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'
+  openaiKey: 'yourOpenAIKey'
   retrievalMinutes: '1'
   limitEvents: '15'
   openaiTimeout: '120'
