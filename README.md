@@ -2,6 +2,11 @@
 ## Resumen
 Este repositorio es el hub principal de artefactos para el prototipo del proyecto de la asignatura AYGO(Arquitectura y Gobernabilidad) del programa de maestría en informática de la Escuela Colombiana de Ingeniería Julio Garavito. 
 
+## Autores
+- [Sebastian Camilo Martinez Reyes](https://github.com/sc-martinez)
+- [Camilo Alejandro Rojas Salazar](https://github.com/camrojass)
+- [David Santiago Castro Vargas](https://github.com/DavidCastro4444)
+
 ### Directorio de artefactos 
 - [Random Log Generator](https://github.com/sc-martinez/random-log-generator)
 - [Anomalies Dectector API](https://github.com/sc-martinez/anomalies-detector-api)
