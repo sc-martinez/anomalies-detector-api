@@ -11,13 +11,23 @@ import org.apache.logging.log4j.Logger;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Represents an API Gateway response.
+ */
 public class ApiGatewayResponse {
-
 	private final int statusCode;
 	private final String body;
 	private final Map<String, String> headers;
 	private final boolean isBase64Encoded;
 
+	/**
+	 * Constructs an ApiGatewayResponse object.
+	 *
+	 * @param statusCode      The HTTP status code of the response.
+	 * @param body            The body of the response.
+	 * @param headers         The headers of the response.
+	 * @param isBase64Encoded Indicates if the body is base64 encoded.
+	 */
 	public ApiGatewayResponse(int statusCode, String body, Map<String, String> headers, boolean isBase64Encoded) {
 		this.statusCode = statusCode;
 		this.body = body;
@@ -25,23 +35,47 @@ public class ApiGatewayResponse {
 		this.isBase64Encoded = isBase64Encoded;
 	}
 
+	/**
+	 * Retrieves the HTTP status code of the response.
+	 *
+	 * @return The HTTP status code.
+	 */
 	public int getStatusCode() {
 		return statusCode;
 	}
 
+	/**
+	 * Retrieves the body of the response.
+	 *
+	 * @return The body of the response.
+	 */
 	public String getBody() {
 		return body;
 	}
 
+	/**
+	 * Retrieves the headers of the response.
+	 *
+	 * @return The headers of the response.
+	 */
 	public Map<String, String> getHeaders() {
 		return headers;
 	}
 
-	// API Gateway expects the property to be called "isBase64Encoded" => isIs
+	/**
+	 * Checks if the body is base64 encoded.
+	 *
+	 * @return true if the body is base64 encoded; otherwise, false.
+	 */
 	public boolean isIsBase64Encoded() {
 		return isBase64Encoded;
 	}
 
+	/**
+	 * Provides a builder for constructing an ApiGatewayResponse object.
+	 *
+	 * @return A new instance of the Builder.
+	 */
 	public static Builder builder() {
 		return new Builder();
 	}
@@ -97,14 +131,6 @@ public class ApiGatewayResponse {
 			return this;
 		}
 
-		/**
-		 * A binary or rather a base64encoded responses requires
-		 * <ol>
-		 * <li>"Binary Media Types" to be configured in API Gateway
-		 * <li>a request with an "Accept" header set to one of the "Binary Media
-		 * Types"
-		 * </ol>
-		 */
 		public Builder setBase64Encoded(boolean base64Encoded) {
 			this.base64Encoded = base64Encoded;
 			return this;
