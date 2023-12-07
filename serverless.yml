@@ -4,7 +4,7 @@ frameworkVersion: '3'
 
 custom:
   classificationResultsTableName: 'java-classifications-${self:provider.stage}'
-  authorizerARN: 'arn:aws:cognito-idp:us-east-1:771784633686:userpool/us-east-1_Ogfq8uycz'
+  authorizerARN: 'UserPoolARN'
   logGroupName: 'PROD-Logs'
   openaiKey: 'openAIKey'
   retrievalMinutes: '5'
@@ -55,6 +55,8 @@ functions:
           path: /logs
           method: get
           cors: true
+          authorizer:
+            arn: ${self:custom.authorizerARN}
   getLogs:
     handler: com.serverless.services.ListLogs
     timeout: 30
@@ -63,6 +65,8 @@ functions:
           path: /logs/getAll
           method: get
           cors: true
+          authorizer:
+            arn: ${self:custom.authorizerARN}
 resources:
   Resources:
     ClassificationsDynamoDBTable:
