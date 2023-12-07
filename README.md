@@ -165,7 +165,7 @@ Cómo segundo paso, se crea un CronJob dirigido por flujo de trabajo, para ello 
 
 #### Muestra del flujo de trabajo:
 
-![CRONJOB](Resources/CRONJOB.PNG)
+![CRONJOB](Resources/CronJob.PNG)
 
 El flujo de trabajo se encargará de solicitar al API que verifiqué el servicio de logs, luego consumirá el resultado por medio de la operación getAll para luego generar un conjunto de incidentes basado en la respuesta del LLM
 
