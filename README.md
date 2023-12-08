@@ -9,7 +9,7 @@ Este repositorio es el hub principal de artefactos para el prototipo del proyect
 
 ### Directorio de artefactos 
 - [Random Log Generator](https://github.com/sc-martinez/random-log-generator)
-- [Anomalies Dectector API](https://github.com/sc-martinez/anomalies-detector-api)
+- [Anomalies Detector API](https://github.com/sc-martinez/anomalies-detector-api)
 - [ServiceNow Update Sets](https://github.com/sc-martinez/anomalies-detector-api/blob/main/ServiceNow/AYGO-Project-1.xml)
 
 ### Vista General de la Arquitectura
