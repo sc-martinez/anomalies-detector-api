@@ -7,17 +7,38 @@ Este repositorio es el hub principal de artefactos para el prototipo del proyect
 - [Camilo Alejandro Rojas Salazar](https://github.com/camrojass)
 - [David Santiago Castro Vargas](https://github.com/DavidCastro4444)
 
-### Directorio de artefactos 
+### Próposito de la solución
+El proyecto se centra en la detección de anomalías en registros de eventos mediante el uso de inteligencia artificial, con el propósito de desarrollar un sistema predictivo capaz de identificar patrones inusuales y potencialmente riesgosos dentro de conjuntos masivos de datos. 
+
+Esta iniciativa busca implementar algoritmos de aprendizaje automático que puedan analizar continuamente la información entrante, identificar desviaciones significativas de los comportamientos habituales y proporcionar alertas tempranas para mitigar posibles amenazas o situaciones problemáticas. 
+
+Además, se pretende no solo detectar anomalías pasadas, sino también anticipar posibles escenarios anómalos mediante el uso de modelos predictivos avanzados, lo que permitiría tomar medidas preventivas proactivas para mantener la integridad y la seguridad de los sistemas involucrados.
+
+## Premisas
+- Grandes empresas tienen aplicaciones en diferentes entornos en la nube (Multicloud).
+
+- La captura y detección de fallas de servicios de aplicación en un entorno Multicloud  es un reto de gobierno para las soluciones de software hoy día.
+
+## Propuesta de solución y alcance del prototipo
+- Se propone la creación de una capa de detección y clasificación de eventos recolectados en soluciones de monitoreo (Cloudwatch).
+
+- El componente será capaz de clasificar, detectar conjuntos y patrones de eventos y tomar acciones definidas por el usuario basadas en las conjeturas del componente
+
+- Las decisiones podrán contemplar lanzamientos de pipelines de soluciones correctivos, la generación de cambios en soluciones de gestión de cambio de forma automática y la generación de incidentes/alertas en soluciones ITSM.
+
+
+
+## Vista General de la Arquitectura
+![ArquitecturalView](Resources/AnomaliesDetectos.drawio.png)
+
+## Directorio de artefactos
 - [Random Log Generator](https://github.com/sc-martinez/random-log-generator)
 - [Anomalies Detector API](https://github.com/sc-martinez/anomalies-detector-api)
 - [ServiceNow Update Sets](https://github.com/sc-martinez/anomalies-detector-api/blob/main/ServiceNow/AYGO-Project-1.xml)
 
-### Vista General de la Arquitectura
-![ArquitecturalView](Resources/AnomaliesDetectos.drawio.png)
+## Detalle de los Artefactos
 
-### Detalle de los componentes
-
-## Random Log Generator 
+### Random Log Generator 
 Este artefacto se encarga de alimentar el servicio de cloudwatch, simulando la presencia de un conjunto de sistemas en el CSP (Cloud Service provider), el componente publicará excepciones comunes de diversas naturalezas en esta ocasión en el servicio de Cloudwatch, cómo se muestra en las imagenes. 
 
 ![RandomLogGenerator](Resources/Recording%202023-11-29%20at%2020.32.35%20(2).gif)
@@ -181,3 +202,15 @@ El flujo de trabajo se encargará de solicitar al API que verifiqué el servicio
 Podrá notar que la plataforma auto asigna los incidentes a los equipos correspondientes basados en la definición de la organización que esté implementando esta solución. 
 
 ![AssignmentRules](Resources/assignmentRules.PNG)
+
+### Conclusiones
+Basándonos en la propuesta presentada, podemos extraer las siguientes conclusiones:
+
+1. **Mejora en la eficiencia del monitoreo y la gestión de eventos:** Al implementar esta capa de detección y clasificación de eventos en soluciones de monitoreo como Cloudwatch, se logrará una identificación más rápida y precisa de conjuntos y patrones de eventos. Esta mejora permitirá tomar acciones definidas por el usuario automáticamente, reduciendo significativamente el tiempo de respuesta ante posibles problemas o anomalías en los sistemas que se están monitoreando.
+
+2. **Automatización de acciones correctivas y preventivas:** La propuesta ofrece la opción de automatizar acciones correctivas, como iniciar pipelines para soluciones correctivas o generar cambios en soluciones de gestión del cambio automáticamente. Esto implica que, al detectar eventos anómalos, el sistema podría realizar correcciones o ajustes inmediatos sin necesidad de intervención humana, lo que minimiza el impacto potencial de problemas y acelera su resolución.
+
+3. **Fortalecimiento de la gestión de incidentes y alertas:** Es crucial poder generar incidentes y alertas en soluciones ITSM (Gestión del Servicio IT) para mantener una gestión proactiva frente a posibles riesgos.
+   Esta propuesta tiene como objetivo no solo identificar eventos anómalos, sino también comunicar y registrar estos eventos de manera efectiva en sistemas de gestión, lo que facilita la toma de decisiones informadas y mejora continua de los procesos de ITSM.
+
+En resumen, la propuesta para implementar una capa de detección y clasificación de eventos en soluciones de monitoreo como Cloudwatch promete mejorar la eficiencia del monitoreo, automatizar acciones correctivas y preventivas, y fortalecer la gestión de incidentes y alertas en entornos IT.
